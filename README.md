@@ -1,36 +1,99 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# JavaScript-Frameworks
 
-## Getting Started
+A responsive e-commerce web application built with Next.js, React, and TypeScript.
+The project allows users to browse products, view product details, add items to a cart, and complete a simple checkout flow.
 
-First, run the development server:
+This project focuses on modern React development practices, responsive UI design, and state management using Zustand.
+
+## Tech Stack
+
+- Next.js
+- React
+- TypeScript
+- Zustand
+- React Icons
+- Eslint
+
+## Features
+
+- Responsive navigation with mobile hamburger menu
+- Product listing page
+- Product detail page
+- Shopping cart functionality
+- Quantity control for cart items
+- Contact form with validation
+- Toast notifications
+- responsive design for desktop and mobile
+
+## Intallation
+
+### Clone the repository
+
+git clone https://github.com/SidraShahid0510/JavaScript-Frameworks.git
+
+### Navigate to the project folder
+
+cd online-shop
+
+### Install dependencies
+
+```bash
+ npm install
+```
+
+## Running the Project
+
+### Development mode
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open in broweser
+http://localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Installed Packages
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Dependencies
 
-## Learn More
+Install Next.js, React and React-dom
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm install next react react-dom
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Install React Icons
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+npm install react-icons
+```
 
-## Deploy on Vercel
+Install Zustand
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+npm install zustand
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Development Dependencies
+
+Install TypeScript
+
+```bash
+npm install --save-dev typescript
+```
+
+Install React Type definitions
+
+```bash
+npm install --save-dev @types/react @types/react-dom
+```
+
+Install Node Types
+
+```bash
+npm install --save-dev @types/node
+```
+
+## Project Link
+
+[Next Online Shop live link]()
