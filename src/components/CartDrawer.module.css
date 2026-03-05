@@ -1,0 +1,288 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 260ms ease;
+  z-index: 1;
+}
+
+.backdropShow {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+
+  width: min(460px, 92vw);
+  background: #fff;
+
+  transform: translateX(100%);
+  transition: transform 320ms ease;
+  z-index: 250;
+
+  display: flex;
+  flex-direction: column;
+
+  box-shadow: -18px 0 40px rgba(0, 0, 0, 0.12);
+}
+
+.open {
+  transform: translateX(0);
+}
+
+.header {
+  padding: 16px 14px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+
+  display: grid;
+  grid-template-columns: 40px 1fr 40px;
+  align-items: center;
+}
+
+.closeBtn {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+
+  display: grid;
+  place-items: center;
+
+  color: #1a1f25;
+}
+
+.closeBtn svg {
+  font-size: 22px;
+}
+
+.title {
+  margin: 0;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 900;
+  color: #1a1f25;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.items {
+  flex: 1;
+  overflow-y: auto;
+  padding: 14px;
+  display: grid;
+  gap: 14px;
+
+  align-content: start;
+  background: #f3f4f6;
+}
+
+.empty {
+  padding: 30px 10px;
+  text-align: center;
+}
+
+.emptyText {
+  margin: 0;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.item {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.06);
+  padding: 14px;
+
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  gap: 14px;
+  align-items: center;
+
+  height: auto;
+}
+
+/* Image */
+.thumb {
+  position: relative;
+  width: 90px;
+  height: 80px;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #f6f7f9;
+}
+
+.thumbImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.info {
+  min-width: 0;
+
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px;
+  align-items: center;
+}
+.itemTitle,
+.price,
+.qtyValue,
+.totalValue,
+.totalLabel,
+.checkoutBtn {
+  color: #1a1f25;
+}
+
+.itemTitle,
+.totalValue,
+.totalLabel,
+.checkoutBtn {
+  text-transform: uppercase;
+}
+
+.itemTitle,
+.totalLabel,
+.checkoutBtn {
+  letter-spacing: 0.09em;
+}
+
+.price,
+.qtyValue,
+.totalValue {
+  letter-spacing: 0.05em;
+}
+
+.itemTitle {
+  margin: 0 0 10px;
+  font-size: 13px;
+  line-height: 1.4;
+  font-weight: 700;
+
+  white-space: normal;
+  overflow-wrap: break-word;
+}
+
+.price {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* Quantity */
+.qtyRow {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.qtyBtnDark {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: none;
+  background: #9ac6e0;
+  color: #1a1f25;
+  cursor: pointer;
+
+  display: grid;
+  place-items: center;
+}
+
+.qtyBtnDark svg {
+  font-size: 20px;
+}
+
+.qtyValue {
+  min-width: 24px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+/* Footer */
+.footer {
+  border-top: 1px solid #00000014;
+  padding: 14px;
+  background: #fff;
+}
+
+.totalRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 2px 12px;
+}
+
+.totalValue,
+.totalLabel {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.checkoutBtn {
+  width: 100%;
+  height: 52px;
+  border: none;
+  border-radius: 999px;
+  background: #9ac6e0;
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.checkoutBtn:hover {
+  background: #7fb3cf;
+}
+
+.checkoutBtn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .totalValue,
+  .totalLabel {
+    font-size: 0.875rem;
+  }
+
+  .checkoutBtn {
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .info {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+
+  .qtyRow {
+    justify-self: start;
+    margin-top: 8px;
+  }
+  .qtyBtnDark {
+    width: 32px;
+    height: 32px;
+  }
+  .itemTitle {
+    margin-bottom: 5px;
+  }
+  .item {
+    align-items: flex-start;
+  }
+  .thumb {
+    position: relative;
+    width: 90px;
+    height: 90px;
+  }
+}

@@ -1,0 +1,165 @@
+/* Card container */
+.card {
+  background: #fff;
+
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  transition:
+    box-shadow 250ms ease,
+    transform 250ms ease;
+}
+
+.card:hover {
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.08);
+  transform: translateY(-3px);
+}
+
+.imageLink {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.imageWrap {
+  position: relative;
+  width: 100%;
+  height: 320px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.image {
+  object-fit: cover;
+  object-position: center;
+  transform: scale(1);
+  transition: transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.card:hover .image {
+  transform: scale(1.04);
+}
+
+.badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  z-index: 2;
+  background: #eb1010;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 7px 12px;
+  border-radius: 999px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Bottom content */
+.bottom {
+  padding: 16px 14px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.title {
+  margin: 0;
+  font-size: 14px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #1a1f25;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ratingRow {
+  display: flex;
+  align-items: center;
+}
+
+/* Stars */
+.stars {
+  display: inline-flex;
+  gap: 3px;
+  align-items: center;
+}
+
+.starFilled {
+  font-size: 18px;
+  color: #f5b301;
+}
+
+.starEmpty {
+  font-size: 18px;
+  color: #d6d6d6;
+}
+
+.priceCartRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.prices {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.currentPrice {
+  font-weight: 700;
+  font-size: 14px;
+  color: #1a1f25;
+  letter-spacing: 0.09em;
+}
+
+.originalPrice {
+  color: #777;
+  text-decoration: line-through;
+  font-size: 12px;
+}
+
+/* Cart button */
+.cartBtn {
+  flex: 0 0 auto;
+  width: 44px;
+  height: 40px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #9ac6e0;
+  transition:
+    transform 180ms ease,
+    background 180ms ease;
+}
+
+.cartBtn:hover {
+  background: #7fb3cf;
+  transform: translateY(-1px);
+}
+
+.cartIcon {
+  font-size: 22px;
+  color: #303437;
+}
+
+/* Responsive */
+@media (max-width: 520px) {
+  .imageWrap {
+    height: 260px;
+  }
+
+  .bottom {
+    padding: 14px 12px 16px;
+  }
+}

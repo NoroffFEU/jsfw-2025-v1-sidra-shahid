@@ -1,0 +1,146 @@
+.page {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 16px;
+  background: #f5f6f8;
+}
+
+.card {
+  width: 100%;
+  max-width: 520px;
+  background: #fff;
+  border-radius: 18px;
+  padding: 36px 28px;
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.12);
+  text-align: left;
+}
+
+.title {
+  margin: 0 0 18px;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #1a1f25;
+}
+
+.form {
+  display: grid;
+  gap: 16px;
+}
+
+.field {
+  display: grid;
+  gap: 8px;
+}
+
+.label {
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: #1a1f25;
+  font-size: 13px;
+  font-weight: 600;
+
+  margin-left: 5px;
+}
+
+.input {
+  width: 100%;
+  padding: 12px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: #f3f4f6;
+  color: #1a1f25;
+  outline: none;
+  transition:
+    border-color 120ms ease,
+    transform 120ms ease;
+}
+.input:focus {
+  border-color: #9ac6e0;
+}
+
+.textarea {
+  min-height: 120px;
+  border-radius: 16px;
+  border: none;
+  background: #f1f2f4;
+  padding: 12px 16px;
+  font-size: 14px;
+  outline: none;
+  resize: none;
+}
+
+.info {
+  margin: 0px 5px;
+  font-size: 11px;
+  opacity: 0.65;
+  line-height: 1.35;
+}
+
+.error {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 500;
+  color: #f85858;
+  margin-left: 5px;
+}
+
+.toastSpace {
+  min-height: 30px;
+}
+
+.toast {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.toastSuccess {
+  background: rgba(19, 122, 53, 0.95);
+  color: white;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.toastError {
+  background: #f85858;
+  color: #ffffff;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.button {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  background: #9ac6e0;
+  color: #1a1f25;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  margin: 0 0 10px;
+}
+
+.button:hover {
+  background: #7fb3cf;
+}
+@media (max-width: 768px) {
+  .title {
+    font-size: 1.25rem;
+  }
+  .button {
+    font-size: 0.75rem;
+  }
+}

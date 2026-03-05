@@ -1,0 +1,236 @@
+/*---------- HEADER ----------*/
+.header {
+  background: #ffffff;
+  padding: 18px 6%;
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+/* Common flex helpers */
+.left,
+.nav,
+.center,
+.logoLink,
+.right,
+.cartLink,
+.cartWrap,
+.searchDesktop,
+.searchMobile {
+  display: flex;
+  align-items: center;
+}
+.topRow {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 16px;
+}
+.left {
+  gap: 14px;
+}
+.nav {
+  gap: 22px;
+}
+.navLink {
+  position: relative;
+  text-decoration: none;
+  color: #1a1f25;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 6px 0;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+.navLink:hover {
+  color: #7fb3cf;
+}
+.navLink::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background: #a0cbdf;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 220ms ease;
+}
+.navLink:hover::after {
+  transform: scaleX(1);
+}
+
+.center {
+  justify-content: center;
+}
+.logoLink {
+  line-height: 0;
+}
+.logoImg {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+.right {
+  justify-content: flex-end;
+  gap: 14px;
+}
+.toastLayer {
+  position: absolute;
+  top: 100%;
+  right: 6%;
+  z-index: 2000;
+  pointer-events: none;
+}
+.searchDesktop,
+.searchMobile {
+  gap: 10px;
+  background: #f3f4f6;
+  border-radius: 999px;
+  padding: 10px 14px;
+}
+.searchDesktop {
+  width: 320px;
+}
+.searchMobile {
+  display: none;
+  margin-top: 12px;
+}
+
+.searchIcon {
+  font-size: 14px;
+  opacity: 0.6;
+}
+
+.searchInput {
+  border: none;
+  outline: none;
+  background: transparent;
+  width: 100%;
+  font-size: 14px;
+}
+.iconBtn,
+.burger,
+.cartLink {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+.iconBtn {
+  display: flex;
+  align-items: center;
+  font-size: 22px;
+  color: #1a1f25;
+}
+.cartLink {
+  position: relative;
+  text-decoration: none;
+  color: #1a1f25;
+  padding: 0;
+}
+.cartIcon {
+  font-size: 24px;
+}
+.cartWrap {
+  position: relative;
+}
+.badge {
+  position: absolute;
+  top: -7px;
+  right: -9px;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: #1a1f25;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+}
+.burger {
+  display: none;
+  font-size: 26px;
+  color: #1a1f25;
+}
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+}
+.mobilePanel {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 280px;
+  background: #a0cbdf;
+  border: none;
+  height: 100vh;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transform: translateX(-110%);
+  transition: transform 280ms ease;
+  z-index: 1000;
+}
+
+.open {
+  transform: translateX(0);
+}
+
+.mobileLink {
+  text-decoration: none;
+  color: #1a1f25;
+  font-size: 14px;
+  padding: 12px 10px;
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+.mobileLink:hover {
+  background: #f3f4f6;
+}
+
+@media (max-width: 1200px) {
+  .topRow {
+    grid-template-columns: auto 1fr auto;
+  }
+  .header {
+    padding-top: 24px;
+  }
+  .nav {
+    display: none;
+  }
+  .burger {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .searchDesktop {
+    display: none;
+  }
+  .searchMobile {
+    display: flex;
+    width: 100%;
+    margin-top: 20px;
+  }
+  .center {
+    justify-content: center;
+  }
+  .mobilePanel {
+    display: flex;
+  }
+}
+@media (max-width: 768px) {
+  .navLink {
+    font-size: 25px;
+  }
+  .logoImg {
+    height: 35px;
+  }
+}

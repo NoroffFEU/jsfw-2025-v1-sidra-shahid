@@ -1,0 +1,435 @@
+.section {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 24px 40px;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 35px;
+  align-items: stretch;
+}
+
+.left,
+.right,
+.errorBox,
+.reviewCard {
+  background: #fff;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.06);
+}
+
+.title,
+.descTitle,
+.descText,
+.qtyLabel,
+.qtyValueModern,
+.priceCurrent,
+.reviewText,
+.noReviews {
+  color: #1a1f25;
+}
+
+.title,
+.descTitle,
+.qtyLabel,
+.addToCart,
+.tag,
+.reviewsTitle {
+  text-transform: uppercase;
+}
+
+.title,
+.tag,
+.reviewName {
+  letter-spacing: 0.05em;
+}
+
+.descTitle,
+.qtyLabel,
+.addToCart,
+.priceCurrent,
+.reviewsTitle {
+  letter-spacing: 0.09em;
+}
+
+.left,
+.right {
+  min-height: 560px;
+  overflow: hidden;
+}
+
+.left {
+  display: flex;
+}
+
+.imageWrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.image {
+  object-fit: cover;
+  object-position: center;
+}
+
+.right {
+  padding: 10px 6px 0 6px;
+
+  background: transparent;
+  box-shadow: none;
+  border-radius: 0;
+  overflow: visible;
+
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.title {
+  margin: 0;
+  font-size: clamp(1.5rem, 4vw, 1.75rem);
+  font-weight: 700;
+}
+
+.priceRatingRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.rating {
+  font-weight: 800;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.descBlock {
+  padding-top: 12px;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.descTitle {
+  margin: 0 0 8px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.descText {
+  margin: 0 0 50px;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.actions {
+  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.qtyRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.qtyLabel {
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.qtyControls {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.qtyBtn {
+  width: 42px;
+  height: 40px;
+  border: none;
+  background: #f4f6f8;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.qtyValue {
+  width: 52px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.qtyControlsModern {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.qtyCircleBtn {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: none;
+  background: #9ac6e0;
+  color: #111;
+  cursor: pointer;
+
+  display: grid;
+  place-items: center;
+
+  transition:
+    background 200ms ease,
+    transform 150ms ease;
+}
+
+.qtyCircleBtn svg {
+  font-size: 20px;
+}
+
+.qtyCircleBtn:hover {
+  background: #7fb3cf;
+  transform: scale(1.05);
+}
+
+.qtyCircleBtn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.qtyValueModern {
+  min-width: 28px;
+  text-align: center;
+  font-weight: 800;
+  font-size: 16px;
+}
+
+.addToCart {
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-radius: 999px;
+  background: #9ac6e0;
+  cursor: pointer;
+
+  font-weight: 700;
+  color: #1a1f25;
+  font-size: 0.9rem;
+  margin-top: 15px;
+}
+
+.addToCart:hover {
+  background: #7fb3cf;
+}
+
+.errorBox {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 24px;
+  border-radius: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.errorTitle {
+  margin: 0 0 10px;
+  font-size: 22px;
+  font-weight: 800;
+  color: #111;
+}
+
+.errorText {
+  margin: 0 0 10px;
+  color: rgba(0, 0, 0, 0.75);
+  line-height: 1.6;
+}
+
+/* Stars */
+.stars {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.starFilled,
+.starEmpty {
+  font-size: 20px;
+}
+
+.starFilled {
+  color: #f5b301;
+}
+
+.starEmpty {
+  color: rgba(0, 0, 0, 0.25);
+}
+
+/* TAGS */
+.tagsRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tag {
+  background: rgba(154, 198, 224, 0.35);
+  border: 1px solid rgba(154, 198, 224, 0.65);
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 9px;
+  font-weight: 700;
+}
+
+/* PRICE */
+.priceBlock {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.priceCurrent {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.priceOld {
+  font-size: 14px;
+  font-weight: 600;
+  opacity: 0.6;
+  text-decoration: line-through;
+}
+
+/* REVIEWS */
+.reviewsSection {
+  max-width: 1200px;
+  margin: 0 auto 60px;
+  padding: 0 24px;
+}
+
+.reviewsTitle {
+  margin: 10px 0 16px;
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.reviewsList {
+  display: grid;
+  gap: 14px;
+}
+
+.reviewCard {
+  padding: 25px;
+}
+
+.reviewTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 10px;
+}
+
+.reviewName {
+  margin: 0;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.reviewText,
+.noReviews {
+  margin: 0;
+  line-height: 1.7;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .section {
+    margin: 40px 6%;
+    padding: 0 0 40px;
+  }
+  .reviewsSection {
+    max-width: 1200px;
+    margin: 0 6% 60px;
+    padding: 0;
+  }
+}
+
+@media (max-width: 1000px) {
+  .wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .left {
+    min-height: 500px;
+    object-fit: cover;
+  }
+
+  .right {
+    min-height: auto;
+  }
+
+  .left {
+    height: 360px;
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 1.125rem;
+  }
+
+  .priceCurrent {
+    font-size: 1rem;
+  }
+
+  .priceOld {
+    font-size: 14px;
+  }
+
+  .addToCart {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .left {
+    min-height: 400px;
+    object-fit: cover;
+  }
+
+  .section {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 400px) {
+  .priceRatingRow {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .priceBlock {
+    margin-bottom: 10px;
+  }
+
+  .qtyRow {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .qtyCircleBtn {
+    width: 35px;
+    height: 35px;
+  }
+
+  .qtyControlsModern {
+    margin-top: 15px;
+  }
+}

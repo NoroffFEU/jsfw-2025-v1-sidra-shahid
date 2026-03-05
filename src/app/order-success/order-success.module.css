@@ -1,0 +1,60 @@
+.page {
+  min-height: 70vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.card {
+  width: 100%;
+  max-width: 520px;
+  background: #f3f4f6;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 18px;
+  padding: 28px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.title {
+  margin: 0 0 10px;
+  font-size: 28px;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: #1a1f25;
+}
+
+.text {
+  margin: 0 0 18px;
+  opacity: 0.85;
+  line-height: 1.7;
+  color: #1a1f25;
+  font-size: 0.9rem;
+}
+
+.button {
+  padding: 12px 18px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  background: #9ac6e0;
+  color: #1a1f25;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+.button:hover {
+  background: #7fb3cf;
+}
+@media (max-width: 768px) {
+  .title {
+    font-size: 20px;
+  }
+  .button {
+    font-size: 0.75rem;
+  }
+  .page {
+    min-height: 50vh;
+  }
+}

@@ -1,0 +1,146 @@
+.container {
+  min-height: 70vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.card {
+  width: 100%;
+  max-width: 420px;
+  background: white;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 18px;
+  padding: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.title {
+  margin: 0 0 18px;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #1a1f25;
+}
+
+.field {
+  margin-bottom: 14px;
+}
+
+.label {
+  display: block;
+  font-size: 13px;
+  margin-bottom: 6px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: #1a1f25;
+  margin-left: 5px;
+}
+
+.input {
+  width: 100%;
+  padding: 12px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: #f3f4f6;
+  color: #1a1f25;
+  outline: none;
+  transition:
+    border-color 120ms ease,
+    transform 120ms ease;
+}
+
+.input:focus {
+  border-color: #9ac6e0;
+}
+
+.inputError {
+  border-color: rgba(255, 107, 107, 0.9);
+}
+
+.hint {
+  margin: 8px 5px 18px;
+  font-size: 11px;
+  opacity: 0.65;
+  line-height: 1.35;
+}
+
+.error {
+  margin: 0px 5px;
+  font-size: 12.5px;
+  color: #f85858;
+  line-height: 1.35;
+  font-weight: 500;
+}
+
+.button {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  background: #9ac6e0;
+  color: #1a1f25;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  margin: 15px 0 10px;
+}
+
+.button:hover {
+  background: #7fb3cf;
+}
+
+.button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.bottomRow {
+  margin-top: 14px;
+  font-size: 13px;
+  opacity: 0.9;
+  color: #1a1f25;
+  text-align: center;
+}
+
+.link {
+  text-decoration: underline;
+  color: #1a1f25;
+  letter-spacing: 0.09em;
+  font-size: 13px;
+  font-weight: 600;
+}
+.toastArea {
+  margin-top: 12px;
+}
+
+.toast {
+  padding: 10px 12px;
+  border-radius: 999px;
+  font-size: 14px;
+  border: 1px solid #ffffff1f;
+  background: #ffffff0f;
+}
+
+.toastSuccess {
+  background: rgba(19, 122, 53, 0.95);
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 400;
+  color: white;
+}
+
+.toastError {
+  border-color: #f85858;
+  background: #ff6b6b1f;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 500;
+  color: white;
+}

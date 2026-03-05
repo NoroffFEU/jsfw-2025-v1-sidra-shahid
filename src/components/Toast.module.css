@@ -1,0 +1,40 @@
+.toast {
+  padding: 10px 14px;
+  border-radius: 14px;
+  font-size: 13px;
+  font-weight: 700;
+  opacity: 0;
+  transform: translateY(-8px);
+  transition:
+    opacity 240ms ease,
+    transform 240ms ease;
+  pointer-events: none;
+  white-space: nowrap;
+  z-index: 9999;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.info {
+  background: #1a1f25;
+  color: white;
+  font-weight: 600;
+}
+
+.success {
+  margin-top: 15px;
+  background: rgba(19, 122, 53, 0.95);
+  color: white;
+  font-weight: 600;
+  text-align: center;
+}
+
+.error {
+  margin-top: 15px;
+  text-align: center;
+  background: rgba(223, 42, 42, 0.95);
+  color: white;
+}
