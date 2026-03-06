@@ -1,27 +1,34 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import styles from "./account.module.css";
 import { getSessionEmail, clearSession } from "@/lib/auth";
 
 export default function AccountPage() {
   const router = useRouter();
-  const email = getSessionEmail();
+  const [email, setEmail] = useState("");
 
   useEffect(() => {
-    if (!email) {
-      router.push("/login?redirect=/account");
-    }
-  }, [email, router]);
+    const sessionEmail = getSessionEmail();
 
-  // Clears the user session and sends the user back to the home page
+    if (!sessionEmail) {
+      router.push("/login?redirect=/account");
+      return;
+    }
+
+    setEmail(sessionEmail);
+  }, [router]);
+
   function handleLogout() {
     clearSession();
     router.push("/");
   }
+
   if (!email) return null;
+
   const username = email.split("@")[0];
+
   return (
     <main className={styles.page}>
       <div className={styles.card}>
