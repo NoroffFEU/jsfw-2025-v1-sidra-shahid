@@ -96,4 +96,4 @@ npm install --save-dev @types/node
 
 ## Project Link
 
-[Next Online Shop live link]()
+[Next Online Shop live link](https://jsfw-2025-v1-sidra-shahid-pxim.vercel.app/)
