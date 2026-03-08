@@ -30,10 +30,13 @@ export default function HomeContent({
 
   useEffect(() => {
     if (!reset) return;
+
     const t = window.setTimeout(() => {
       setSelectedTag(null);
-
-      window.history.replaceState(null, "", "/#products");
+      window.history.replaceState(null, "", "/");
+      window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+      document.documentElement.scrollTop = 0;
+      document.body.scrollTop = 0;
     }, 0);
 
     return () => window.clearTimeout(t);

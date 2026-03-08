@@ -44,6 +44,7 @@ export default function ProductCard({ product }: { product: Product }) {
     <article className={styles.card}>
       <Link
         href={`/products/${encodeURIComponent(product.id)}`}
+        scroll={true}
         className={styles.imageLink}
         aria-label={`View details for ${product.title}`}
       >

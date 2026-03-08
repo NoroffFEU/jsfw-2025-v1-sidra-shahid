@@ -78,6 +78,7 @@ export default function Hero({
 
           <Link
             href={`/products/${leftProduct.id}`}
+            scroll={true}
             className={styles.featureImg}
             aria-label={`Go to ${leftProduct.title}`}
           >

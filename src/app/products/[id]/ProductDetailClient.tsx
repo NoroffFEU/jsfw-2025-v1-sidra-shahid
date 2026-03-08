@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styles from "./ProductDetail.module.css";
 import type { Product } from "@/lib/types";
 import { MdAdd, MdRemove } from "react-icons/md";
@@ -19,7 +19,11 @@ export default function ProductDetailClient({ product }: { product: Product }) {
   const increase = () => {
     setQty(qty + 1);
   };
-
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+  }, [product.id]);
   // Adds the product to the cart with the selected quantity and shows a toast message
   function handleAddToCart() {
     const price = Math.round(

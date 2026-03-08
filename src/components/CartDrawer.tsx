@@ -41,6 +41,12 @@ export default function CartDrawer({ open, onClose }: Props) {
     }
 
     router.push("/checkout");
+
+    setTimeout(() => {
+      window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+      document.documentElement.scrollTop = 0;
+      document.body.scrollTop = 0;
+    }, 50);
   }
 
   return (

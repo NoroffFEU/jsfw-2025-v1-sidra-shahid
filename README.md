@@ -29,7 +29,7 @@ This project focuses on modern React development practices, responsive UI design
 
 ### Clone the repository
 
-git clone https://github.com/SidraShahid0510/JavaScript-Frameworks.git
+git clone https://github.com/NoroffFEU/jsfw-2025-v1-sidra-shahid.git
 
 ### Navigate to the project folder
 

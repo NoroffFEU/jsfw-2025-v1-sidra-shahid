@@ -98,7 +98,8 @@ export default function Header() {
         {/* CENTER */}
         <div className={styles.center}>
           <Link
-            href="/?reset=1#products"
+            href={{ pathname: "/", query: { reset: "1" } }}
+            scroll={true}
             className={styles.logoLink}
             aria-label="Home"
             onClick={() => {
