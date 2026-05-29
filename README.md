@@ -1,9 +1,10 @@
 # JavaScript-Frameworks
 
-A responsive e-commerce web application built with Next.js, React, and TypeScript.
-The project allows users to browse products, view product details, add items to a cart, and complete a simple checkout flow.
 
-This project focuses on modern React development practices, responsive UI design, and state management using Zustand.
+
+![image alt](https://github.com/NoroffFEU/jsfw-2025-v1-sidra-shahid/blob/main/next-image.png?raw=true)
+
+A responsive e-commerce web application built with Next.js, React, and TypeScript.The project allows users to browse products, view product details, add items to a cart, and complete a simple checkout flow.This project focuses on modern React development practices, responsive UI design, and state management using Zustand.
 
 ## Tech Stack
 
