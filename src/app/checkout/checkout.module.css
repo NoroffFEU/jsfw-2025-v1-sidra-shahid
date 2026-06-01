@@ -235,3 +235,75 @@
     margin: 0;
   }
 }
+/* loading */
+.skeletonTitle,
+.skeletonHeading,
+.skeletonThumb,
+.skeletonText,
+.skeletonPrice,
+.skeletonQty,
+.skeletonSummaryRow,
+.skeletonButton {
+  background: linear-gradient(90deg, #eee 25%, #f7f7f7 50%, #eee 75%);
+  background-size: 200% 100%;
+  animation: skeletonLoading 2.5s infinite;
+  border-radius: 8px;
+}
+
+.skeletonTitle {
+  width: 180px;
+  height: 42px;
+  margin-bottom: 2rem;
+}
+
+.skeletonHeading {
+  width: 160px;
+  height: 28px;
+  margin-bottom: 1.5rem;
+}
+
+.skeletonThumb {
+  width: 90px;
+  height: 90px;
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+.skeletonText {
+  width: 220px;
+  height: 20px;
+  margin-bottom: 0.8rem;
+}
+
+.skeletonPrice {
+  width: 90px;
+  height: 18px;
+}
+
+.skeletonQty {
+  width: 110px;
+  height: 42px;
+  border-radius: 999px;
+}
+
+.skeletonSummaryRow {
+  width: 100%;
+  height: 28px;
+  margin-bottom: 1.5rem;
+}
+
+.skeletonButton {
+  width: 100%;
+  height: 48px;
+  border-radius: 999px;
+}
+
+@keyframes skeletonLoading {
+  from {
+    background-position: 200% 0;
+  }
+
+  to {
+    background-position: -200% 0;
+  }
+}

@@ -4,7 +4,7 @@ import Image from "next/image";
 import styles from "./CartDrawer.module.css";
 import { MdClose, MdAdd, MdRemove, MdDelete } from "react-icons/md";
 import { useRouter } from "next/navigation";
-import { getSessionEmail } from "@/lib/auth";
+
 import { showToast } from "@/lib/toast";
 import { useCartStore } from "@/store/cartStore";
 
@@ -30,15 +30,7 @@ export default function CartDrawer({ open, onClose }: Props) {
   }
   // Handles checkout
   function handleCheckout() {
-    const sessionEmail = getSessionEmail();
-
-    // close drawer when navigating
     onClose();
-
-    if (!sessionEmail) {
-      router.push("/login?redirect=/checkout");
-      return;
-    }
 
     router.push("/checkout");
 

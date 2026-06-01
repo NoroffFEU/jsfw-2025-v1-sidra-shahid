@@ -1,10 +1,10 @@
 "use client";
 
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import styles from "./checkout.module.css";
-import { getSessionEmail } from "@/lib/auth";
+
 import { showToast } from "@/lib/toast";
 import { MdAdd, MdRemove, MdDelete } from "react-icons/md";
 import { useCartStore } from "@/store/cartStore";
@@ -18,15 +18,12 @@ export default function CheckoutPage() {
   const clear = useCartStore((state) => state.clear);
   const totalPrice = useCartStore((state) => state.totalPrice);
 
-  // Check if the user is logged in. If not, redirect to login page.
-  useEffect(() => {
-    const session = getSessionEmail();
-    if (!session) {
-      router.push("/login?redirect=/checkout");
-    }
-  }, [router]);
-
   const total = Math.round(totalPrice());
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   // Toast when removing item
   function handleRemoveItem(id: string, title: string) {
@@ -40,7 +37,41 @@ export default function CheckoutPage() {
     clear();
     router.push("/order-success");
   }
+  if (!isMounted) {
+    return (
+      <main className={styles.page}>
+        <div className={styles.skeletonTitle}></div>
 
+        <div className={styles.grid}>
+          <section className={styles.left}>
+            <div className={styles.skeletonHeading}></div>
+
+            {[1, 2, 3].map((item) => (
+              <div key={item} className={styles.item}>
+                <div className={styles.skeletonThumb}></div>
+
+                <div className={styles.textBlock}>
+                  <div className={styles.skeletonText}></div>
+                  <div className={styles.skeletonPrice}></div>
+                </div>
+
+                <div className={styles.skeletonQty}></div>
+              </div>
+            ))}
+          </section>
+
+          <aside className={styles.right}>
+            <div className={styles.skeletonHeading}></div>
+
+            <div className={styles.summaryBox}>
+              <div className={styles.skeletonSummaryRow}></div>
+              <div className={styles.skeletonButton}></div>
+            </div>
+          </aside>
+        </div>
+      </main>
+    );
+  }
   return (
     <main className={styles.page}>
       <h1 className={styles.pageTitle}>Checkout</h1>

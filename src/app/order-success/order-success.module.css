@@ -58,3 +58,50 @@
     min-height: 50vh;
   }
 }
+/* loading */
+.skeletonTitle,
+.skeletonText,
+.skeletonTextSmall,
+.skeletonButton {
+  background: linear-gradient(90deg, #eee 25%, #f7f7f7 50%, #eee 75%);
+  background-size: 200% 100%;
+  animation: skeletonLoading 2.5s infinite;
+  border-radius: 8px;
+}
+
+.skeletonTitle {
+  width: 260px;
+  height: 42px;
+  margin: 0 auto 1.5rem;
+}
+
+.skeletonText {
+  width: 100%;
+  max-width: 420px;
+  height: 20px;
+  margin: 0 auto 0.8rem;
+}
+
+.skeletonTextSmall {
+  width: 70%;
+  max-width: 300px;
+  height: 20px;
+  margin: 0 auto 2rem;
+}
+
+.skeletonButton {
+  width: 180px;
+  height: 48px;
+  margin: 0 auto;
+  border-radius: 999px;
+}
+
+@keyframes skeletonLoading {
+  from {
+    background-position: 200% 0;
+  }
+
+  to {
+    background-position: -200% 0;
+  }
+}
